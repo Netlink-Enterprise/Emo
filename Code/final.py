@@ -181,7 +181,7 @@ def bootup():
     
 def sound(emotion):
     for i in range(1):
-	    os.system("aplay /home/pi/Desktop/EmoBot/sound/"+emotion+".wav")
+	    os.system("aplay /home/pro1/EmoBot/sound"+emotion+".wav")
     
 def show(emotion,count):
     for i in range(count):
@@ -189,7 +189,7 @@ def show(emotion,count):
             disp = LCD_2inch.LCD_2inch()
             disp.Init()
             for i in range(frame_count[emotion]):
-                image = Image.open('/home/pi/Desktop/EmoBot/emotions/'+emotion+'/frame'+str(i)+'.png')	
+                image = Image.open('/home/pro1/EmoBot/emotions'+emotion+'/frame'+str(i)+'.png')	
                 disp.ShowImage(image)
         except IOError as e:
             logging.info(e)    
